@@ -1,35 +1,35 @@
 #include <stdio.h>
 
 /**
- * main - print 1 to 100 and fizzbuzz
+ * main - Prints numbers from 1 to 100 with FizzBuzz rules.
  *
- * Return: 0
+ * Return: Always 0.
  */
 int main(void)
 {
-int i;
+	int i;
 
-for (i = 1; i <= 100; i++)
-{
-if ((i % 3 == 0) && (i % 5) == 0)
-{
-printf("FizzBuzz ");
-}
-else if (i % 3 == 0)
-{
-printf("Fizz ");
-}
-else if (i % 5 == 0)
-{
-printf("Buzz ");
-}
-else
-{
-printf("%d ", i);
-}
-}
-printf("Buzz");
-printf("\n");
+	for (i = 1; i <= 100; i++)
+	{
+		if ((i % 3 == 0) && (i % 5 == 0))
+		{
+			printf("FizzBuzz ");
+		}
+		else if (i % 3 == 0)
+		{
+			printf("Fizz ");
+		}
+		else if (i % 5 == 0)
+		{
+			printf("Buzz ");
+		}
+		else
+		{
+			printf("%d ", i);
+		}
+	}
+	printf("Buzz");
+	printf("\n");
 
-return (0);
+	return (0);
 }
