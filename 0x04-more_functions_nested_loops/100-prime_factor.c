@@ -1,33 +1,27 @@
 #include <stdio.h>
 
+/**
+ * main - function find and print largest prime factor of num 612852475143
+ *
+ * Return: 0
+ */
 int main(void)
 {
-long int n = 612852475143;
-long int largestPrimeFactor = 0;
-long int i;
+long prime = 612852475143, div;
 
-/* Find factors of 2 */
-while (n % 2 == 0)
+while (div < (prime / 2))
 {
-largestPrimeFactor = 2;
-n /= 2;
+if ((prime % 2) == 0)
+{
+prime /= 2;
+continue;
 }
-/* Find odd factors */
-for (long int i = 3; i * i <= n; i += 2)
+for (div = 3 ; div < (prime / 2) ; div += 2)
 {
-while (n % i == 0)
-{
-largestPrimeFactor = i;
-n /= i;
+if ((prime % div) == 0)
+prime /= div;
 }
 }
-/* If remaining factor is greater than 2 */
-if (n > 2)
-{
-largestPrimeFactor = n;
-}
-
-printf("Largest prime factor: %ld\n", largestPrimeFactor);
-
+printf("%ld\n", prime);
 return (0);
 }
